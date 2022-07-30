@@ -5,10 +5,19 @@ const taskDescriptions =[];
 // Create a new task by adding to the arrays
 // A new task will be created as incomplete
 function newTask(title,description) {
-  taskTitles.push(title);
-  taskDescriptions.push(description);
-  taskComplete.push(false);
+  const task ={
+    title: title,
+    description: description,
+    complete: false
+  };
+  return task;
 }
+
+const task1 = newTask("Clean Cat Litter", "Take all the 💩 out of the litter box");
+const task2 = newTask("Do Laundry", "😨");
+const tasks = [task1, task2];
+
+console.log(tasks);
 
 // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
 function completeTask(taskIndex) {
